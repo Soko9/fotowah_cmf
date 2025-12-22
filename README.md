@@ -1,16 +1,82 @@
 # fotowah_cmf
+System App for Fotowat Al Aqsa
 
-CMF System App for Fotowat Al Aqsa
+## DATA
 
-## Getting Started
+### users
+| KEY           | TYPE     |
+|---------------|----------|
+| id            | uuid     |
+| full_name     | text     |
+| gender        | bit      |
+| date_of_birth | datetime |
+| phone         | text     |
+| created_at    | datetime |
 
-This project is a starting point for a Flutter application.
+### roles
+| KEY                                              | TYPE |
+|--------------------------------------------------|------|
+| id                                               | uuid |
+| name (admin, supervisor, volunteer, kid, parent) | text |
 
-A few resources to get you started if this is your first Flutter project:
+### user_roles
+| KEY     | TYPE |
+|---------|------|
+| user_id | uuid |
+| role_id | uuid |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### sections --main sections
+| KEY                                         | TYPE |
+|---------------------------------------------|------|
+| id                                          | uuid |
+| name                                        | text |
+| description                                 | text |
+| type (sports, education, religious, social) | text |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### activities
+| KEY        | TYPE     |
+|------------|----------|
+| id         | uuid     |
+| section_id | uuid     |
+| name       | text     |
+| section_id | uuid     |
+| datetime   | datetime |
+| place      | text     |
+
+### activity_members
+| KEY              | TYPE     |
+|------------------|----------|
+| activity_id      | uuid     |
+| user_id          | uuid     |
+| role_in_activity | uuid     |
+| joined_at        | datetime |
+
+### sessions
+| KEY         | TYPE     |
+|-------------|----------|
+| id          | uuid     |
+| activity_id | uuid     |
+| date        | datetime |
+| topic       | text     |
+| notes       | text     |
+
+### attendance
+| KEY                               | TYPE |
+|-----------------------------------|------|
+| session_id                        | uuid | 
+| user_id                           | uuid |
+| status (present, absent, excused) | text |
+
+### progress
+| KEY         | TYPE     |
+|-------------|----------|
+| user_id     | uuid     |
+| activity_id | uuid     |
+| score       | int      |
+| notes       | text     |
+| updated_at  | datetime |
+
+### additional data
+- monthly_attendance_view
+- annual_progress_view
+- section_growth_view
