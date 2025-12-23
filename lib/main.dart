@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fotowah_cmf/app/core/navigation/app_routes.dart';
 import 'package:fotowah_cmf/app/core/theme/app_theme.dart';
+import 'package:fotowah_cmf/app/src/home/home_screen.dart';
 
 void main() {
   runApp(const System());
@@ -14,24 +16,8 @@ class System extends StatelessWidget {
       title: 'Fotowah CMF',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: const Home(),
-    );
-  }
-}
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Text(
-          'فتوة الأقصى',
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
-      ),
+      initialRoute: HomeScreen.route,
+      onGenerateRoute: AppRoutes.appRoutes,
     );
   }
 }
