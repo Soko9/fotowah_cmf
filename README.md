@@ -1,8 +1,17 @@
 # fotowah_cmf
 System App for Fotowat Al Aqsa
 
-## DATA
+## Sections
+1. حلقات القرآن
+2. رائدات
+3. Smart Academy  
+4. رياضة
+5. كشاف
+6. القسم الاجتماعي
+7. القسم الدعوي
+8. قسم العلاقات
 
+## DATA
 ### users
 | KEY           | TYPE     |
 |---------------|----------|
@@ -25,13 +34,12 @@ System App for Fotowat Al Aqsa
 | user_id | uuid |
 | role_id | uuid |
 
-### sections --main sections
-| KEY                                         | TYPE |
-|---------------------------------------------|------|
-| id                                          | uuid |
-| name                                        | text |
-| description                                 | text |
-| type (sports, education, religious, social) | text |
+### sections
+| KEY         | TYPE |
+|-------------|------|
+| id          | uuid |
+| name        | text |
+| description | text |
 
 ### activities
 | KEY        | TYPE     |
