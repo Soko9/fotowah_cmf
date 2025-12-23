@@ -1,10 +1,10 @@
 # fotowah_cmf
 System App for Fotowat Al Aqsa
 
-## Sections
+## SECTIONS
 1. حلقات القرآن
 2. رائدات
-3. Smart Academy  
+3. Smart Academy
 4. رياضة
 5. كشاف
 6. القسم الاجتماعي
@@ -12,7 +12,7 @@ System App for Fotowat Al Aqsa
 8. قسم العلاقات
 
 ## DATA
-### users
+### members
 | KEY           | TYPE     |
 |---------------|----------|
 | id            | uuid     |
@@ -20,71 +20,104 @@ System App for Fotowat Al Aqsa
 | gender        | bit      |
 | date_of_birth | datetime |
 | phone         | text     |
-| created_at    | datetime |
+| address_id    | uuid     |
+| nationality   | text     |
+| joined_at     | datetime |
+| is_active     | bool     |
+
+### addressed
+| KEY      | TYPE |
+|----------|------|
+| id       | uuid |
+| city     | text |
+| district | text |
+| !address | text |
 
 ### roles
-| KEY                                              | TYPE |
-|--------------------------------------------------|------|
-| id                                               | uuid |
-| name (admin, supervisor, volunteer, kid, parent) | text |
+| KEY  | TYPE |
+|------|------|
+| id   | uuid |
+| name | text |
 
-### user_roles
-| KEY     | TYPE |
-|---------|------|
-| user_id | uuid |
-| role_id | uuid |
+[//]: # (ROLES)
+[//]: # (* admin)
+[//]: # (* section_manager)
+[//]: # (* quran_manager)
+[//]: # (* staff)
+[//]: # (* kid)
+[//]: # (* guardian)
+[//]: # (* needy)
+[//]: # (* supporter)
 
-### sections
-| KEY         | TYPE |
-|-------------|------|
-| id          | uuid |
-| name        | text |
-| description | text |
+### permissions
+| KEY  | TYPE |
+|------|------|
+| id   | uuid |
+| name | text |
 
-### activities
-| KEY        | TYPE     |
-|------------|----------|
-| id         | uuid     |
-| section_id | uuid     |
-| name       | text     |
-| section_id | uuid     |
-| datetime   | datetime |
-| place      | text     |
+### role_permissions
+| KEY           | TYPE |
+|---------------|------|
+| role_id       | uuid |
+| permission_id | uuid |
 
-### activity_members
-| KEY              | TYPE     |
-|------------------|----------|
-| activity_id      | uuid     |
-| user_id          | uuid     |
-| role_in_activity | uuid     |
-| joined_at        | datetime |
+### member_roles
+| KEY       | TYPE |
+|-----------|------|
+| member_id | uuid |
+| role_id   | uuid |
 
-### sessions
-| KEY         | TYPE     |
-|-------------|----------|
-| id          | uuid     |
-| activity_id | uuid     |
-| date        | datetime |
-| topic       | text     |
-| notes       | text     |
+### section
+| KEY                | TYPE |
+|--------------------|------|
+| id                 | uuid |
+| name               | text |
+| section_manager_id | uuid |
 
-### attendance
-| KEY                               | TYPE |
-|-----------------------------------|------|
-| session_id                        | uuid | 
-| user_id                           | uuid |
-| status (present, absent, excused) | text |
+### quran_circles
+| KEY              | TYPE       |
+|------------------|------------|
+| id               | uuid       |
+| name             | text       |
+| weeklyGatherings | datetime[] |
+| quran_manager_id | uuid       |
+| section_id       | uuid       |
 
-### progress
-| KEY         | TYPE     |
-|-------------|----------|
-| user_id     | uuid     |
-| activity_id | uuid     |
-| score       | int      |
-| notes       | text     |
-| updated_at  | datetime |
+### quran_circle_memebers
+| KEY       | TYPE |
+|-----------|------|
+| circle_id | uuid |
+| member_id | uuid |
+
+### quran_circle_gathering
+| KEY       | TYPE     |
+|-----------|----------|
+| id        | int      |
+| datetime  | datetime |
+| place     | text     |
+| circle_id | uuid     |
+
+### quran_circle_attendence
+| KEY           | TYPE       |
+|---------------|------------|
+| gathering_id  | uuid       |
+| member_id     | uuid       |
+| status        | uuid       |
+| score         | int        |
+| !note         | text       |
+| !quran_verses | (int, int) |
+| !quality      | int        |
+
+[//]: # (STATUSES)
+[//]: # (* absent)
+[//]: # (* present)
+[//]: # (* excused)
 
 ### additional data
 - monthly_attendance_view
 - annual_progress_view
 - section_growth_view
+- auto_deactivating_members
+- parent_aware_notification_system
+
+---------------------------------------------
