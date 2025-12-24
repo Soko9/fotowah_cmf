@@ -46,3 +46,4 @@ app.*.map.json
 
 # Others
 /lib/app/meta
+pubspec.lock
