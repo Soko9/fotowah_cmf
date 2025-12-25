@@ -7,7 +7,7 @@ class AppTheme {
 
   static ThemeData get light => ThemeData.light().copyWith(
     scaffoldBackgroundColor: AppColors.background,
-    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.muted),
+    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
     textTheme: AppTextTheme.appTextTheme,
   );
 }

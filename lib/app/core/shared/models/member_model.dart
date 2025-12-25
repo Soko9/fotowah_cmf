@@ -69,6 +69,19 @@ class MemberModel {
         [],
   );
 
+  factory MemberModel.dummy() => MemberModel(
+    id: '1',
+    fullName: 'يحيى محمود السعدي',
+    gender: Gender.male,
+    dateOfBirth: DateTime(1990),
+    phone: '+1234567890',
+    addressId: AddressModel.dummy().id,
+    address: AddressModel.dummy(),
+    nationality: 'فلسطيني',
+    joinedAt: DateTime.now(),
+    isActive: true,
+  );
+
   Map<String, dynamic> toJson() => {
     MemberFields.id: id,
     MemberFields.fullName: fullName,
