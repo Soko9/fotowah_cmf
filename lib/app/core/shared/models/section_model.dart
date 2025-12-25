@@ -9,7 +9,7 @@ class SectionFields {
   static const sectionManager = 'section_manager';
 }
 
-// region One-To-Many
+//region One-To-Many
 // final response = await supabase
 //     .from('section')
 // .select('*, ${SectionFields.sectionManager}:member(*)'); // Select all section fields AND all member fields

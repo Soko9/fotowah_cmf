@@ -18,10 +18,10 @@ class MemberFields {
   static const roles = 'roles';
 }
 
-// region One-To-Many
+//region One-To-Many
 // final response = await supabase
 //     .from('member')
-// .select('*, address(*)'); // Select all member fields AND all address fields
+// .select('*, ${MemberFields.address}(*)'); // Select all member fields AND all address fields
 //endregion
 
 //region Many-To-Many
