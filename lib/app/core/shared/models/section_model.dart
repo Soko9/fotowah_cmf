@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fotowah_cmf/app/core/shared/extensions/list_extensions.dart';
+import 'package:fotowah_cmf/app/core/shared/extensions/string_extensions.dart';
 import 'package:fotowah_cmf/app/core/shared/models/member_model.dart';
 
 class SectionFields {
@@ -39,8 +39,8 @@ class SectionModel {
             json[SectionFields.sectionManager] as Map<String, dynamic>,
           )
         : null,
-    sectionColor: (json[SectionFields.sectionColor] as List<double>?) != null
-        ? (json[SectionFields.sectionColor] as List<double>).fromARGB
+    sectionColor: (json[SectionFields.sectionColor] as String?) != null
+        ? (json[SectionFields.sectionColor] as String).fromHex
         : Colors.grey,
     sectionLogo: json[SectionFields.sectionLogo] as String?,
   );
