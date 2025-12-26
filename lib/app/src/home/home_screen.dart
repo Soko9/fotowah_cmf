@@ -11,15 +11,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: GridView.count(
-          padding: const EdgeInsets.all(16),
-          mainAxisSpacing: 16,
-          crossAxisSpacing: 16,
-          crossAxisCount: 4,
-          shrinkWrap: true,
-          children: SectionModel.dummyList().map((section) {
-            return SectionTile(section: section);
-          }).toList(),
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          runAlignment: WrapAlignment.center,
+          spacing: 16,
+          runSpacing: 16,
+          children: SectionModel.dummyList()
+              .map((section) => SectionTile(section: section))
+              .toList(),
         ),
       ),
     );

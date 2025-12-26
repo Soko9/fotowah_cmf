@@ -10,7 +10,7 @@ class AppColors {
   static const primary = Color(0xFFD9C99A);
   static const quran = Color(0xFF87CEEB);
   static const women = Color(0xFFFF91A4);
-  static const social = Color(0xFFFFD7BE);
+  static const social = Color(0xFFFDC7A5);
   static const sports = Color(0xFF9CAF88);
   static const academy = Color(0xFFCCCCFF);
   static const relations = Color(0xFF008080);

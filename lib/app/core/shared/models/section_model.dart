@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fotowah_cmf/app/core/managers/assets_manager.dart';
 import 'package:fotowah_cmf/app/core/shared/extensions/string_extensions.dart';
 import 'package:fotowah_cmf/app/core/shared/models/member_model.dart';
+import 'package:fotowah_cmf/app/core/theme/app_colors.dart';
 
 class SectionFields {
   const SectionFields._();
@@ -51,10 +53,77 @@ class SectionModel {
     SectionFields.sectionManagerId: sectionManagerId,
   };
 
+  static List<SectionModel> dummyList() => [
+    SectionModel(
+      id: '1',
+      name: 'حلقات القرآن',
+      sectionColor: AppColors.quran,
+      sectionLogo: AssetsManager.logoSvg,
+      sectionManager: MemberModel.dummy(),
+      sectionManagerId: MemberModel.dummy().id,
+    ),
+    SectionModel(
+      id: '2',
+      name: 'الأكاديمية',
+      sectionColor: AppColors.academy,
+      sectionLogo: AssetsManager.logoSvg,
+      sectionManager: MemberModel.dummy(),
+      sectionManagerId: MemberModel.dummy().id,
+    ),
+    SectionModel(
+      id: '3',
+      name: 'رائدات',
+      sectionColor: AppColors.women,
+      sectionLogo: AssetsManager.logoSvg,
+      sectionManager: MemberModel.dummy(),
+      sectionManagerId: MemberModel.dummy().id,
+    ),
+    SectionModel(
+      id: '4',
+      name: 'الكشافة',
+      sectionColor: AppColors.scouts,
+      sectionLogo: AssetsManager.logoSvg,
+      sectionManager: MemberModel.dummy(),
+      sectionManagerId: MemberModel.dummy().id,
+    ),
+    SectionModel(
+      id: '5',
+      name: 'القسم الاجتماعي',
+      sectionColor: AppColors.social,
+      sectionLogo: AssetsManager.logoSvg,
+      sectionManager: MemberModel.dummy(),
+      sectionManagerId: MemberModel.dummy().id,
+    ),
+    SectionModel(
+      id: '6',
+      name: 'القسم الرياضي',
+      sectionColor: AppColors.sports,
+      sectionLogo: AssetsManager.logoSvg,
+      sectionManager: MemberModel.dummy(),
+      sectionManagerId: MemberModel.dummy().id,
+    ),
+    SectionModel(
+      id: '7',
+      name: 'القسم الدعوي',
+      sectionColor: AppColors.daawah,
+      sectionLogo: AssetsManager.logoSvg,
+      sectionManager: MemberModel.dummy(),
+      sectionManagerId: MemberModel.dummy().id,
+    ),
+    SectionModel(
+      id: '8',
+      name: 'قسم العلاقات العامة',
+      sectionColor: AppColors.relations,
+      sectionLogo: AssetsManager.logoSvg,
+      sectionManager: MemberModel.dummy(),
+      sectionManagerId: MemberModel.dummy().id,
+    ),
+  ];
+
   final String id;
   final String name;
   final String? sectionManagerId;
   final MemberModel? sectionManager;
-  final Color? sectionColor;
+  final Color sectionColor;
   final String? sectionLogo;
 }

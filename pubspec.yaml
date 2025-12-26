@@ -1,7 +1,7 @@
 name: fotowah_cmf
 description: "CMF System App for Fotowat Al Aqsa"
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -11,12 +11,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.2.3
+  window_manager: ^0.5.1
 
 dev_dependencies:
   very_good_analysis: ^10.0.0
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
 
   fonts:
     - family: Beiruti
