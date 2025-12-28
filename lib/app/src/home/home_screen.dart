@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fotowah_cmf/app/config/window_custom_top_bar.dart';
 import 'package:fotowah_cmf/app/core/shared/models/section_model.dart';
 import 'package:fotowah_cmf/app/src/home/widgets/section_tile.dart';
 
@@ -10,6 +11,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const WindowCustomTopBar(
+        title: 'فتوة الأقصى',
+      ),
       body: Center(
         child: Wrap(
           alignment: WrapAlignment.center,

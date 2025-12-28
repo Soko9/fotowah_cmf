@@ -2,6 +2,9 @@
 
 #include <optional>
 
+#include <flutter/method_channel.h>
+#include <flutter/standard_method_codec.h>
+
 #include "flutter/generated_plugin_registrant.h"
 
 FlutterWindow::FlutterWindow(const flutter::DartProject& project)
@@ -14,6 +17,33 @@ bool FlutterWindow::OnCreate() {
     return false;
   }
 
+  // MY CHANGES BEGIN //
+  HWND hwnd = GetHandle();
+
+  LONG style = GetWindowLong(hwnd, GWL_STYLE);
+
+  // Remove title bar
+  style &= ~WS_CAPTION;
+
+  // Disable resizing
+  style &= ~WS_THICKFRAME;
+
+  // Disable maximize button
+  style &= ~WS_MAXIMIZEBOX;
+
+  // Keep minimize button (do NOT remove WS_MINIMIZEBOX)
+
+  SetWindowLong(hwnd, GWL_STYLE, style);
+
+  // Apply style changes
+  SetWindowPos(
+      hwnd,
+      nullptr,
+      0, 0, 0, 0,
+      SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED
+  );
+  // MY CHANGES END //
+
   RECT frame = GetClientArea();
 
   // The size here must match the window dimensions to avoid unnecessary surface
@@ -25,10 +55,34 @@ bool FlutterWindow::OnCreate() {
     return false;
   }
   RegisterPlugins(flutter_controller_->engine());
+
+  // MY CHANGES BEGIN //
+  flutter::MethodChannel<> channel(
+    flutter_controller_->engine()->messenger(),
+    "window_controls",
+    &flutter::StandardMethodCodec::GetInstance());
+
+  channel.SetMethodCallHandler(
+    [this](const flutter::MethodCall<>& call,
+           std::unique_ptr<flutter::MethodResult<>> result) {
+      HWND hwnd = GetHandle();
+
+      if (call.method_name() == "minimize") {
+        ShowWindow(hwnd, SW_MINIMIZE);
+      } else if (call.method_name() == "close") {
+        PostMessage(hwnd, WM_CLOSE, 0, 0);
+      }
+
+    result->Success();
+  });
+
+  // MY CHANGES END //
+
   SetChildContent(flutter_controller_->view()->GetNativeWindow());
 
   flutter_controller_->engine()->SetNextFrameCallback([&]() {
     this->Show();
+    ShowWindow(GetHandle(), SW_MAXIMIZE);
   });
 
   // Flutter can complete the first frame before the "show window" callback is

@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fotowah_cmf/app/core/navigation/app_routes.dart';
 import 'package:fotowah_cmf/app/core/theme/app_theme.dart';
 import 'package:fotowah_cmf/app/src/home/home_screen.dart';
-import 'package:window_manager/window_manager.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await windowManager.ensureInitialized();
-  const windowOptions = WindowOptions(
-    center: true,
-    fullScreen: true,
-    titleBarStyle: TitleBarStyle.hidden,
+void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: Colors.white,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ),
   );
-  await windowManager.waitUntilReadyToShow(windowOptions, () async {
-    await windowManager.show();
-    await windowManager.focus();
-  });
   runApp(const System());
 }
 

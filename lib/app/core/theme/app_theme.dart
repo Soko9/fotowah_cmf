@@ -9,5 +9,12 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.background,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
     textTheme: AppTextTheme.appTextTheme,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.transparent,
+      foregroundColor: AppColors.text,
+      elevation: 0,
+      centerTitle: true,
+      actionsPadding: EdgeInsets.only(right: 8),
+    ),
   );
 }
