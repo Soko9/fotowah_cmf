@@ -41,7 +41,7 @@ class _SectionTileState extends State<SectionTile> {
                   child: AnimatedScale(
                     duration: const Duration(milliseconds: 250),
                     curve: Curves.easeInOut,
-                    scale: _isHovering ? 5 : 1,
+                    scale: _isHovering ? 4 : 1,
                     child: AnimatedOpacity(
                       duration: const Duration(milliseconds: 250),
                       curve: Curves.easeInOut,

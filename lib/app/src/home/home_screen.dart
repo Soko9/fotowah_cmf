@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fotowah_cmf/app/config/window_custom_top_bar.dart';
 import 'package:fotowah_cmf/app/core/shared/models/section_model.dart';
@@ -10,10 +11,17 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isWindows = defaultTargetPlatform == TargetPlatform.windows;
+
     return Scaffold(
-      appBar: const WindowCustomTopBar(
-        title: 'فتوة الأقصى',
-      ),
+      appBar: isWindows
+          ? const WindowCustomTopBar(
+              title: 'فتوة الأقصى',
+            )
+          : AppBar(
+              title: const Text('فتوة الأقصى'),
+              centerTitle: false,
+            ),
       body: Center(
         child: Wrap(
           alignment: WrapAlignment.center,
