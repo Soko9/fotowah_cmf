@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 extension StringX on String {
   Color get fromHex {
@@ -9,5 +9,13 @@ extension StringX on String {
     }
 
     return Color(int.parse(hexString, radix: 16));
+  }
+
+  TimeOfDay get time {
+    final parts = split(':');
+    return TimeOfDay(
+      hour: int.parse(parts[0]),
+      minute: int.parse(parts[1]),
+    );
   }
 }
