@@ -9,12 +9,14 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.background,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
     textTheme: AppTextTheme.appTextTheme,
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
       foregroundColor: AppColors.text,
       elevation: 0,
       centerTitle: true,
-      actionsPadding: EdgeInsets.only(right: 8),
+      toolbarHeight: kToolbarHeight * 1.5,
+      titleTextStyle: AppTextTheme.appTextTheme.titleLarge,
+      actionsPadding: const EdgeInsetsGeometry.directional(start: 8),
     ),
   );
 }

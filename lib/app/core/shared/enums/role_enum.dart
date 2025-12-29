@@ -1,4 +1,4 @@
-enum Role {
+enum RoleEnum {
   admin,
   sectionManager,
   quranCircleManager,
@@ -8,19 +8,19 @@ enum Role {
   needy,
   supporter;
 
-  factory Role.fromString(String roleStr) => Role.values.singleWhere(
+  factory RoleEnum.fromString(String roleStr) => RoleEnum.values.singleWhere(
     (r) => r.string.toLowerCase() == roleStr.toLowerCase(),
-    orElse: () => Role.admin,
+    orElse: () => RoleEnum.admin,
   );
 
   String get string => switch (this) {
-    Role.admin => 'admin',
-    Role.sectionManager => 'section_manager',
-    Role.quranCircleManager => 'quran_circle_manager',
-    Role.staff => 'staff',
-    Role.kid => 'kid',
-    Role.guardian => 'guardian',
-    Role.needy => 'needy',
-    Role.supporter => 'supporter',
+    RoleEnum.admin => 'admin',
+    RoleEnum.sectionManager => 'section_manager',
+    RoleEnum.quranCircleManager => 'quran_circle_manager',
+    RoleEnum.staff => 'staff',
+    RoleEnum.kid => 'kid',
+    RoleEnum.guardian => 'guardian',
+    RoleEnum.needy => 'needy',
+    RoleEnum.supporter => 'supporter',
   };
 }

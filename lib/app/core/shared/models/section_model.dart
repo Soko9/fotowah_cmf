@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fotowah_cmf/app/core/managers/assets_manager.dart';
+import 'package:fotowah_cmf/app/core/shared/enums/section_enum.dart';
 import 'package:fotowah_cmf/app/core/shared/extensions/string_extensions.dart';
 import 'package:fotowah_cmf/app/core/shared/models/member_model.dart';
 import 'package:fotowah_cmf/app/core/theme/app_colors.dart';
@@ -29,6 +30,7 @@ class SectionModel {
     this.sectionManager,
     this.sectionColor = Colors.grey,
     this.sectionLogo,
+    this.type,
   });
 
   factory SectionModel.fromJson(Map<String, dynamic> json) => SectionModel(
@@ -61,6 +63,7 @@ class SectionModel {
       sectionLogo: AssetsManager.logoSvg,
       sectionManager: MemberModel.dummy(),
       sectionManagerId: MemberModel.dummy().id,
+      type: SectionEnum.quran,
     ),
     SectionModel(
       id: '2',
@@ -69,6 +72,7 @@ class SectionModel {
       sectionLogo: AssetsManager.logoSvg,
       sectionManager: MemberModel.dummy(),
       sectionManagerId: MemberModel.dummy().id,
+      type: SectionEnum.academy,
     ),
     SectionModel(
       id: '3',
@@ -77,6 +81,7 @@ class SectionModel {
       sectionLogo: AssetsManager.logoSvg,
       sectionManager: MemberModel.dummy(),
       sectionManagerId: MemberModel.dummy().id,
+      type: SectionEnum.women,
     ),
     SectionModel(
       id: '4',
@@ -85,6 +90,7 @@ class SectionModel {
       sectionLogo: AssetsManager.logoSvg,
       sectionManager: MemberModel.dummy(),
       sectionManagerId: MemberModel.dummy().id,
+      type: SectionEnum.scouts,
     ),
     SectionModel(
       id: '5',
@@ -93,6 +99,7 @@ class SectionModel {
       sectionLogo: AssetsManager.logoSvg,
       sectionManager: MemberModel.dummy(),
       sectionManagerId: MemberModel.dummy().id,
+      type: SectionEnum.social,
     ),
     SectionModel(
       id: '6',
@@ -101,6 +108,7 @@ class SectionModel {
       sectionLogo: AssetsManager.logoSvg,
       sectionManager: MemberModel.dummy(),
       sectionManagerId: MemberModel.dummy().id,
+      type: SectionEnum.sports,
     ),
     SectionModel(
       id: '7',
@@ -109,6 +117,7 @@ class SectionModel {
       sectionLogo: AssetsManager.logoSvg,
       sectionManager: MemberModel.dummy(),
       sectionManagerId: MemberModel.dummy().id,
+      type: SectionEnum.daawah,
     ),
     SectionModel(
       id: '8',
@@ -117,6 +126,7 @@ class SectionModel {
       sectionLogo: AssetsManager.logoSvg,
       sectionManager: MemberModel.dummy(),
       sectionManagerId: MemberModel.dummy().id,
+      type: SectionEnum.relations,
     ),
   ];
 
@@ -126,4 +136,5 @@ class SectionModel {
   final MemberModel? sectionManager;
   final Color sectionColor;
   final String? sectionLogo;
+  final SectionEnum? type;
 }

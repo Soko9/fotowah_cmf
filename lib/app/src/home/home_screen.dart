@@ -30,7 +30,9 @@ class HomeScreen extends StatelessWidget {
           spacing: 16,
           runSpacing: 16,
           children: SectionModel.dummyList()
-              .map((section) => SectionTile(section: section))
+              .map(
+                (section) => SectionTile(section: section),
+              )
               .toList(),
         ),
       ),

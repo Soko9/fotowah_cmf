@@ -48,7 +48,7 @@ class MemberModel {
   factory MemberModel.fromJson(Map<String, dynamic> json) => MemberModel(
     id: json[MemberFields.id] as String,
     fullName: json[MemberFields.fullName] as String,
-    gender: Gender.fromString(json[MemberFields.gender] as String),
+    gender: GenderEnum.fromString(json[MemberFields.gender] as String),
     joinedAt: DateTime.parse(json[MemberFields.joinedAt] as String),
     isActive: json[MemberFields.isActive] as bool,
     dateOfBirth: (json[MemberFields.dateOfBirth] as String?) != null
@@ -72,7 +72,7 @@ class MemberModel {
   factory MemberModel.dummy() => MemberModel(
     id: '1',
     fullName: 'يحيى محمود السعدي',
-    gender: Gender.male,
+    gender: GenderEnum.male,
     dateOfBirth: DateTime(1990),
     phone: '+1234567890',
     addressId: AddressModel.dummy().id,
@@ -96,7 +96,7 @@ class MemberModel {
 
   final String id;
   final String fullName;
-  final Gender gender;
+  final GenderEnum gender;
   final DateTime? dateOfBirth;
   final String? phone;
   final String? addressId;

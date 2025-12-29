@@ -1,19 +1,20 @@
-enum Gender {
+enum GenderEnum {
   male,
   female;
 
-  factory Gender.fromString(String genderStr) => Gender.values.singleWhere(
-    (g) => g.string.toLowerCase() == genderStr.toLowerCase(),
-    orElse: () => Gender.male,
-  );
+  factory GenderEnum.fromString(String genderStr) =>
+      GenderEnum.values.singleWhere(
+        (g) => g.string.toLowerCase() == genderStr.toLowerCase(),
+        orElse: () => GenderEnum.male,
+      );
 
   String get name => switch (this) {
-    Gender.male => 'ذكر',
-    Gender.female => 'أنثى',
+    GenderEnum.male => 'ذكر',
+    GenderEnum.female => 'أنثى',
   };
 
   String get string => switch (this) {
-    Gender.male => 'male',
-    Gender.female => 'female',
+    GenderEnum.male => 'male',
+    GenderEnum.female => 'female',
   };
 }

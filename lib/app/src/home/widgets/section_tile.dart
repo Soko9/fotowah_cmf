@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fotowah_cmf/app/core/shared/enums/section_enum.dart';
 import 'package:fotowah_cmf/app/core/shared/extensions/context_extensions.dart';
 import 'package:fotowah_cmf/app/core/shared/models/section_model.dart';
+import 'package:fotowah_cmf/app/src/home/widgets/quran_dialog.dart';
 
 class SectionTile extends StatefulWidget {
   const SectionTile({
@@ -18,6 +20,14 @@ class SectionTile extends StatefulWidget {
 class _SectionTileState extends State<SectionTile> {
   bool _isHovering = false;
 
+  Future<void> _showCircles() async {
+    await showAdaptiveDialog<void>(
+      context: context,
+      barrierDismissible: true,
+      builder: (context) => const QuranDialog(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final logoSize = context.width * 0.05;
@@ -26,7 +36,20 @@ class _SectionTileState extends State<SectionTile> {
       onHover: (_) => setState(() => _isHovering = true),
       onExit: (_) => setState(() => _isHovering = false),
       child: InkWell(
-        onTap: () {},
+        onTap: () async {
+          switch (widget.section.type) {
+            case SectionEnum.quran:
+              await _showCircles();
+            case SectionEnum.women:
+            case SectionEnum.scouts:
+            case SectionEnum.academy:
+            case SectionEnum.relations:
+            case SectionEnum.daawah:
+            case SectionEnum.social:
+            case SectionEnum.sports:
+            case _:
+          }
+        },
         child: SizedBox(
           height: context.height * 0.4,
           width: context.width * 0.2,
