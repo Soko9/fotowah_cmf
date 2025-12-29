@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fotowah_cmf/app/src/home/home_screen.dart';
+import 'package:fotowah_cmf/app/src/home/home_view.dart';
 
-class NoRoute extends StatelessWidget {
-  const NoRoute({super.key});
+class NoPage extends StatelessWidget {
+  const NoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class NoRoute extends StatelessWidget {
                 await Navigator.of(
                   context,
                 ).pushNamedAndRemoveUntil(
-                  HomeScreen.route,
+                  HomeView.route,
                   (_) => false,
                 );
               },

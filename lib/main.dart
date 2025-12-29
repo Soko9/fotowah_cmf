@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:fotowah_cmf/app/core/navigation/app_routes.dart';
+import 'package:fotowah_cmf/app/core/navigation/app_pages.dart';
 import 'package:fotowah_cmf/app/core/theme/app_theme.dart';
-import 'package:fotowah_cmf/app/src/home/home_screen.dart';
+import 'package:fotowah_cmf/app/src/home/home_view.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const System());
@@ -13,7 +14,7 @@ class System extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Fotowah CMF',
       debugShowCheckedModeBanner: false,
       locale: const Locale('ar'),
@@ -26,8 +27,9 @@ class System extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       theme: AppTheme.light,
-      initialRoute: HomeScreen.route,
-      onGenerateRoute: AppRoutes.appRoutes,
+      initialRoute: HomeView.route,
+      unknownRoute: AppPages.noPage,
+      getPages: AppPages.pages,
     );
   }
 }

@@ -1,0 +1,180 @@
+{
+    "sections": [
+        {
+            "id": "sec-001",
+            "name": "قسم التحفيظ",
+            "section_color": "#1B5E20",
+            "section_logo": "assets/images/logo.svg",
+            "section_manager": {
+                "id": "mem-001",
+                "full_name": "محمد عبدالعزيز",
+                "gender": "male",
+                "date_of_birth": "2009-04-11",
+                "phone": "0501112233",
+                "nationality": "سعودي",
+                "joined_at": "2023-02-10T16:00:00+00:00",
+                "is_active": true,
+                "address": {
+                    "id": "1",
+                    "city": "الرياض",
+                    "district": "الروضة",
+                    "address": "شارع حفصة"
+                }
+            }
+        },
+        {
+            "id": "sec-002",
+            "name": "قسم المراجعة",
+            "section_color": "#0D47A1",
+            "section_logo": "assets/images/logo.svg",
+            "section_manager": {
+                "id": "mem-002",
+                "full_name": "عبدالله بن سالم",
+                "gender": "male",
+                "date_of_birth": "2009-04-11",
+                "phone": "0501112233",
+                "nationality": "سعودي",
+                "joined_at": "2023-02-10T16:00:00+00:00",
+                "is_active": true,
+                "address": {
+                    "id": "1",
+                    "city": "الرياض",
+                    "district": "الروضة",
+                    "address": "شارع حفصة"
+                }
+            }
+        },
+        {
+            "id": "sec-003",
+            "name": "قسم التجويد",
+            "section_color": "#4A148C",
+            "section_logo": "assets/images/logo.svg",
+            "section_manager": {
+                "id": "mem-003",
+                "full_name": "خالد أحمد",
+                "gender": "male",
+                "date_of_birth": "2009-04-11",
+                "phone": "0501112233",
+                "nationality": "سعودي",
+                "joined_at": "2023-02-10T16:00:00+00:00",
+                "is_active": true,
+                "address": {
+                    "id": "1",
+                    "city": "الرياض",
+                    "district": "الروضة",
+                    "address": "شارع حفصة"
+                }
+            }
+        },
+        {
+            "id": "sec-004",
+            "name": "قسم القراءات",
+            "section_color": "#BF360C",
+            "section_logo": "assets/images/logo.svg",
+            "section_manager": {
+                "id": "mem-004",
+                "full_name": "عبدالرحمن حسن",
+                "gender": "male",
+                "date_of_birth": "2009-04-11",
+                "phone": "0501112233",
+                "nationality": "سعودي",
+                "joined_at": "2023-02-10T16:00:00+00:00",
+                "is_active": true,
+                "address": {
+                    "id": "1",
+                    "city": "الرياض",
+                    "district": "الروضة",
+                    "address": "شارع حفصة"
+                }
+            }
+        },
+        {
+            "id": "sec-005",
+            "name": "قسم الناشئة",
+            "section_color": "#2E7D32",
+            "section_logo": "assets/images/logo.svg",
+            "section_manager": {
+                "id": "mem-005",
+                "full_name": "سعد بن ناصر",
+                "gender": "male",
+                "date_of_birth": "2009-04-11",
+                "phone": "0501112233",
+                "nationality": "سعودي",
+                "joined_at": "2023-02-10T16:00:00+00:00",
+                "is_active": true,
+                "address": {
+                    "id": "1",
+                    "city": "الرياض",
+                    "district": "الروضة",
+                    "address": "شارع حفصة"
+                }
+            }
+        },
+        {
+            "id": "sec-006",
+            "name": "قسم الكبار",
+            "section_color": "#37474F",
+            "section_logo": "assets/images/logo.svg",
+            "section_manager": {
+                "id": "mem-006",
+                "full_name": "عبدالله فهد",
+                "gender": "male",
+                "date_of_birth": "2009-04-11",
+                "phone": "0501112233",
+                "nationality": "سعودي",
+                "joined_at": "2023-02-10T16:00:00+00:00",
+                "is_active": true,
+                "address": {
+                    "id": "1",
+                    "city": "الرياض",
+                    "district": "الروضة",
+                    "address": "شارع حفصة"
+                }
+            }
+        },
+        {
+            "id": "sec-007",
+            "name": "قسم الإجازات",
+            "section_color": "#6A1B9A",
+            "section_logo": "assets/images/logo.svg",
+            "section_manager": {
+                "id": "mem-007",
+                "full_name": "إبراهيم يوسف",
+                "gender": "male",
+                "date_of_birth": "2009-04-11",
+                "phone": "0501112233",
+                "nationality": "سعودي",
+                "joined_at": "2023-02-10T16:00:00+00:00",
+                "is_active": true,
+                "address": {
+                    "id": "1",
+                    "city": "الرياض",
+                    "district": "الروضة",
+                    "address": "شارع حفصة"
+                }
+            }
+        },
+        {
+            "id": "sec-008",
+            "name": "قسم الإشراف",
+            "section_color": "#263238",
+            "section_logo": "assets/images/logo.svg",
+            "section_manager": {
+                "id": "mem-008",
+                "full_name": "طارق بن علي",
+                "gender": "male",
+                "date_of_birth": "2009-04-11",
+                "phone": "0501112233",
+                "nationality": "سعودي",
+                "joined_at": "2023-02-10T16:00:00+00:00",
+                "is_active": true,
+                "address": {
+                    "id": "1",
+                    "city": "الرياض",
+                    "district": "الروضة",
+                    "address": "شارع حفصة"
+                }
+            }
+        }
+    ]
+}

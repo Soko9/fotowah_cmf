@@ -3,8 +3,8 @@ import 'package:fotowah_cmf/app/core/shared/extensions/widget_extensions.dart';
 import 'package:fotowah_cmf/app/core/theme/app_colors.dart';
 import 'package:fotowah_cmf/app/src/quran/widgets/quran_box.dart';
 
-class QuranHomeScreen extends StatelessWidget {
-  const QuranHomeScreen({super.key});
+class QuranHomeView extends StatelessWidget {
+  const QuranHomeView({super.key});
 
   static const route = '/quran-home';
 
