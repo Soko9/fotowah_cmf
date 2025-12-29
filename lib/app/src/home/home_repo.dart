@@ -15,7 +15,7 @@ class HomeRepo {
           .map((e) => SectionModel.fromJson(e as Map<String, dynamic>))
           .toList();
       return Right(sections);
-    } on Exception catch (e) {
+    } catch (e) {
       return Left(AppFailure(e.toString()));
     }
   }
