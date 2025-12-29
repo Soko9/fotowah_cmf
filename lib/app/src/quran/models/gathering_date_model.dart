@@ -30,19 +30,6 @@ class GatheringDateModel {
     GatheringDateFields.timeOfDay: timeOfDay.time,
   };
 
-  static List<GatheringDateModel> dummyList() => const [
-    GatheringDateModel(
-      id: 1,
-      weekday: 'الأربعاء',
-      timeOfDay: TimeOfDay(hour: 14, minute: 30),
-    ),
-    GatheringDateModel(
-      id: 2,
-      weekday: 'السبت',
-      timeOfDay: TimeOfDay(hour: 11, minute: 00),
-    ),
-  ];
-
   final int id;
   final String weekday;
   final TimeOfDay timeOfDay;

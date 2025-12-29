@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fotowah_cmf/app/core/managers/assets_manager.dart';
 import 'package:fotowah_cmf/app/core/shared/enums/section_enum.dart';
 import 'package:fotowah_cmf/app/core/shared/extensions/string_extensions.dart';
 import 'package:fotowah_cmf/app/core/shared/models/member_model.dart';
-import 'package:fotowah_cmf/app/core/theme/app_colors.dart';
 
 class SectionFields {
   const SectionFields._();
@@ -54,81 +52,6 @@ class SectionModel {
     SectionFields.name: name,
     SectionFields.sectionManagerId: sectionManagerId,
   };
-
-  static List<SectionModel> dummyList() => [
-    SectionModel(
-      id: '1',
-      name: 'حلقات القرآن',
-      sectionColor: AppColors.quran,
-      sectionLogo: AssetsManager.logoSvg,
-      sectionManager: MemberModel.dummy(),
-      sectionManagerId: MemberModel.dummy().id,
-      type: SectionEnum.quran,
-    ),
-    SectionModel(
-      id: '2',
-      name: 'الأكاديمية',
-      sectionColor: AppColors.academy,
-      sectionLogo: AssetsManager.logoSvg,
-      sectionManager: MemberModel.dummy(),
-      sectionManagerId: MemberModel.dummy().id,
-      type: SectionEnum.academy,
-    ),
-    SectionModel(
-      id: '3',
-      name: 'رائدات',
-      sectionColor: AppColors.women,
-      sectionLogo: AssetsManager.logoSvg,
-      sectionManager: MemberModel.dummy(),
-      sectionManagerId: MemberModel.dummy().id,
-      type: SectionEnum.women,
-    ),
-    SectionModel(
-      id: '4',
-      name: 'الكشافة',
-      sectionColor: AppColors.scouts,
-      sectionLogo: AssetsManager.logoSvg,
-      sectionManager: MemberModel.dummy(),
-      sectionManagerId: MemberModel.dummy().id,
-      type: SectionEnum.scouts,
-    ),
-    SectionModel(
-      id: '5',
-      name: 'القسم الاجتماعي',
-      sectionColor: AppColors.social,
-      sectionLogo: AssetsManager.logoSvg,
-      sectionManager: MemberModel.dummy(),
-      sectionManagerId: MemberModel.dummy().id,
-      type: SectionEnum.social,
-    ),
-    SectionModel(
-      id: '6',
-      name: 'القسم الرياضي',
-      sectionColor: AppColors.sports,
-      sectionLogo: AssetsManager.logoSvg,
-      sectionManager: MemberModel.dummy(),
-      sectionManagerId: MemberModel.dummy().id,
-      type: SectionEnum.sports,
-    ),
-    SectionModel(
-      id: '7',
-      name: 'القسم الدعوي',
-      sectionColor: AppColors.daawah,
-      sectionLogo: AssetsManager.logoSvg,
-      sectionManager: MemberModel.dummy(),
-      sectionManagerId: MemberModel.dummy().id,
-      type: SectionEnum.daawah,
-    ),
-    SectionModel(
-      id: '8',
-      name: 'قسم العلاقات العامة',
-      sectionColor: AppColors.relations,
-      sectionLogo: AssetsManager.logoSvg,
-      sectionManager: MemberModel.dummy(),
-      sectionManagerId: MemberModel.dummy().id,
-      type: SectionEnum.relations,
-    ),
-  ];
 
   final String id;
   final String name;

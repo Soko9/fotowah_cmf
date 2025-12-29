@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fotowah_cmf/app/core/navigation/no_route.dart';
 import 'package:fotowah_cmf/app/core/shared/extensions/widget_extensions.dart';
 import 'package:fotowah_cmf/app/src/home/home_screen.dart';
-import 'package:fotowah_cmf/app/src/quran/models/quran_circle_model.dart';
 import 'package:fotowah_cmf/app/src/quran/screens/quran_home_screen.dart';
 
 class AppRoutes {
@@ -13,10 +12,7 @@ class AppRoutes {
       case HomeScreen.route:
         return const HomeScreen().wrapper;
       case QuranHomeScreen.route:
-        final quranCircle =
-            settings.arguments as QuranCircleModel? ??
-            QuranCircleModel.dummyList()[0];
-        return QuranHomeScreen(quranCircle: quranCircle).wrapper;
+        return const QuranHomeScreen().wrapper;
       default:
         return const NoRoute().wrapper;
     }

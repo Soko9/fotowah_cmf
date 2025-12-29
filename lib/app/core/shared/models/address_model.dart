@@ -22,12 +22,6 @@ class AddressModel {
     address: json[AddressFields.address] as String?,
   );
 
-  factory AddressModel.dummy() => const AddressModel(
-    id: '1',
-    city: 'عين الحلوة',
-    district: 'طيطبا',
-  );
-
   Map<String, dynamic> toJson() => {
     AddressFields.id: id,
     AddressFields.city: city,
