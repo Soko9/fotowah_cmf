@@ -30,6 +30,11 @@ class GatheringDateModel {
     GatheringDateFields.timeOfDay: timeOfDay.time,
   };
 
+  @override
+  String toString() {
+    return '$weekday: ${timeOfDay.time}';
+  }
+
   final int id;
   final String weekday;
   final TimeOfDay timeOfDay;

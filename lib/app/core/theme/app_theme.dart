@@ -16,7 +16,11 @@ class AppTheme {
       centerTitle: true,
       toolbarHeight: kToolbarHeight * 1.5,
       titleTextStyle: AppTextTheme.appTextTheme.titleLarge,
-      actionsPadding: const EdgeInsetsGeometry.directional(start: 8),
+      actionsPadding: const EdgeInsetsGeometry.directional(end: 8),
+      actionsIconTheme: const IconThemeData(
+        size: 36,
+        color: AppColors.text,
+      ),
     ),
   );
 }

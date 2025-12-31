@@ -13,7 +13,7 @@ class AppColors {
   static const social = Color(0xFFFDC7A5);
   static const sports = Color(0xFF9CAF88);
   static const academy = Color(0xFFCCCCFF);
-  static const relations = Color(0xFF008080);
+  static const relations = Color(0xFF47E1E1);
   static const daawah = Color(0xFFE6B7C0);
   static const scouts = Color(0xFFD7B65B);
 }

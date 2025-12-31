@@ -12,6 +12,7 @@ class SectionFields {
   static const sectionManager = 'section_manager';
   static const sectionColor = 'section_color';
   static const sectionLogo = 'section_logo';
+  static const type = 'type';
 }
 
 //region One-To-Many
@@ -45,12 +46,17 @@ class SectionModel {
         ? (json[SectionFields.sectionColor] as String).fromHex
         : Colors.grey,
     sectionLogo: json[SectionFields.sectionLogo] as String?,
+    type: (json[SectionFields.type] as String?) != null
+        ? SectionEnum.fromString(json[SectionFields.type] as String)
+        : null,
   );
 
   Map<String, dynamic> toJson() => {
     SectionFields.id: id,
     SectionFields.name: name,
     SectionFields.sectionManagerId: sectionManagerId,
+    SectionFields.sectionLogo: sectionLogo,
+    SectionFields.type: type?.string,
   };
 
   final String id;

@@ -79,6 +79,14 @@ class QuranCircleModel {
     QurnCircleFields.sectionId: sectionId,
   };
 
+  @override
+  String toString() {
+    return 'QuranCircleModel(id: $id, name: $name, quranCircleManagerId: '
+        '$quranCircleManagerId, quranCircleManager: $quranCircleManager,'
+        ' sectionId: $sectionId, section: $section,weeklyGatherings: '
+        '$weeklyGatherings, members: $members)';
+  }
+
   final String id;
   final String name;
   final String? quranCircleManagerId;

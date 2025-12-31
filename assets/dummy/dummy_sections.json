@@ -2,9 +2,10 @@
     "sections": [
         {
             "id": "sec-001",
-            "name": "قسم التحفيظ",
-            "section_color": "#1B5E20",
+            "name": "حلقات القرآن",
+            "section_color": "#87CEEB",
             "section_logo": "assets/images/logo.svg",
+            "type": "quran",
             "section_manager": {
                 "id": "mem-001",
                 "full_name": "محمد عبدالعزيز",
@@ -24,9 +25,10 @@
         },
         {
             "id": "sec-002",
-            "name": "قسم المراجعة",
-            "section_color": "#0D47A1",
+            "name": "رائدات",
+            "section_color": "#FF91A4",
             "section_logo": "assets/images/logo.svg",
+            "type": "women",
             "section_manager": {
                 "id": "mem-002",
                 "full_name": "عبدالله بن سالم",
@@ -46,9 +48,10 @@
         },
         {
             "id": "sec-003",
-            "name": "قسم التجويد",
-            "section_color": "#4A148C",
+            "name": "الأكاديمية",
+            "section_color": "#CCCCFF",
             "section_logo": "assets/images/logo.svg",
+            "type": "academy",
             "section_manager": {
                 "id": "mem-003",
                 "full_name": "خالد أحمد",
@@ -68,9 +71,10 @@
         },
         {
             "id": "sec-004",
-            "name": "قسم القراءات",
-            "section_color": "#BF360C",
+            "name": "الكشافة",
+            "section_color": "#D7B65B",
             "section_logo": "assets/images/logo.svg",
+            "type": "scouts",
             "section_manager": {
                 "id": "mem-004",
                 "full_name": "عبدالرحمن حسن",
@@ -90,9 +94,10 @@
         },
         {
             "id": "sec-005",
-            "name": "قسم الناشئة",
-            "section_color": "#2E7D32",
+            "name": "رياضة",
+            "section_color": "#9CAF88",
             "section_logo": "assets/images/logo.svg",
+            "type": "sports",
             "section_manager": {
                 "id": "mem-005",
                 "full_name": "سعد بن ناصر",
@@ -112,9 +117,10 @@
         },
         {
             "id": "sec-006",
-            "name": "قسم الكبار",
-            "section_color": "#37474F",
+            "name": "القسم الدعوي",
+            "section_color": "#E6B7C0",
             "section_logo": "assets/images/logo.svg",
+            "type": "daawah",
             "section_manager": {
                 "id": "mem-006",
                 "full_name": "عبدالله فهد",
@@ -134,9 +140,10 @@
         },
         {
             "id": "sec-007",
-            "name": "قسم الإجازات",
-            "section_color": "#6A1B9A",
+            "name": "القسم الاجتماعي",
+            "section_color": "#FDC7A5",
             "section_logo": "assets/images/logo.svg",
+            "type": "social",
             "section_manager": {
                 "id": "mem-007",
                 "full_name": "إبراهيم يوسف",
@@ -156,9 +163,10 @@
         },
         {
             "id": "sec-008",
-            "name": "قسم الإشراف",
-            "section_color": "#263238",
+            "name": "العلاقات العامة",
+            "section_color": "#47E1E1",
             "section_logo": "assets/images/logo.svg",
+            "type": "relations",
             "section_manager": {
                 "id": "mem-008",
                 "full_name": "طارق بن علي",

@@ -15,8 +15,8 @@ class HomeRepo {
           .map((e) => SectionModel.fromJson(e as Map<String, dynamic>))
           .toList();
       return Right(sections);
-    } catch (e) {
-      return Left(AppFailure(e.toString()));
+    } catch (e, st) {
+      return Left(AppFailure(message: e.toString(), stackTrace: st));
     }
   }
 }

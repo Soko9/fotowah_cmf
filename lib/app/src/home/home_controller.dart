@@ -1,18 +1,11 @@
+import 'package:fotowah_cmf/app/core/shared/models/base/base_getx_controller.dart';
 import 'package:fotowah_cmf/app/core/shared/models/section_model.dart';
 import 'package:fotowah_cmf/app/src/home/home_repo.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class HomeController extends BaseGetxController {
   HomeController(this._homeRepo);
   final HomeRepo _homeRepo;
-
-  final RxBool _isLoading = false.obs;
-  bool get isLoading => _isLoading.value;
-  set isLoading(bool value) => _isLoading.value = value;
-
-  final RxString _errorMessage = ''.obs;
-  String get errorMessage => _errorMessage.value;
-  set errorMessage(String value) => _errorMessage.value = value;
 
   final RxList<SectionModel> _sections = <SectionModel>[].obs;
   List<SectionModel> get sections => _sections;
@@ -32,7 +25,7 @@ class HomeController extends GetxController {
       final either = await _homeRepo.getSections();
       either.fold(
         (failure) {
-          errorMessage = failure.message;
+          errorMessage = failure.toString();
         },
         (result) {
           sections = result;

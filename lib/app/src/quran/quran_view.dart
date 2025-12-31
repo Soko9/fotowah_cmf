@@ -1,33 +1,27 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:fotowah_cmf/app/config/window_custom_top_bar.dart';
 import 'package:fotowah_cmf/app/core/shared/widgets/app_error_message.dart';
 import 'package:fotowah_cmf/app/core/shared/widgets/app_loader.dart';
-import 'package:fotowah_cmf/app/src/home/home_controller.dart';
-import 'package:fotowah_cmf/app/src/home/widgets/section_tile.dart';
+import 'package:fotowah_cmf/app/core/theme/app_colors.dart';
+import 'package:fotowah_cmf/app/src/quran/quran_controller.dart';
+import 'package:fotowah_cmf/app/src/quran/widgets/circle_tile.dart';
 import 'package:get/get.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({super.key});
+class QuranView extends GetView<QuranController> {
+  const QuranView({super.key});
 
-  static const String route = '/';
+  static const route = '/quran';
 
   @override
   Widget build(BuildContext context) {
-    final isWindows = defaultTargetPlatform == TargetPlatform.windows;
-
     return Scaffold(
-      appBar: isWindows
-          ? const WindowCustomTopBar(
-              title: 'فتوة الأقصى',
-            )
-          : AppBar(
-              title: const Text('فتوة الأقصى'),
-              centerTitle: false,
-            ),
+      appBar: AppBar(
+        backgroundColor: AppColors.quran.withValues(alpha: 0.2),
+        title: const Text('حلقات القرآن'),
+        centerTitle: false,
+      ),
       body: Obx(
         () => controller.isLoading
-            ? const AppLoader()
+            ? const AppLoader(color: AppColors.quran)
             : controller.errorMessage.isNotEmpty
             ? AppErrorMessage(message: controller.errorMessage)
             : Center(
@@ -37,9 +31,9 @@ class HomeView extends GetView<HomeController> {
                   runAlignment: WrapAlignment.center,
                   spacing: 16,
                   runSpacing: 16,
-                  children: controller.sections
+                  children: controller.circles
                       .map(
-                        (section) => SectionTile(section: section),
+                        (circle) => CircleTile(circle: circle),
                       )
                       .toList(),
                 ),
